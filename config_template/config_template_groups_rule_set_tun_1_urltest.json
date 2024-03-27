@@ -117,7 +117,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ],
       "default": "America"
     },
@@ -130,7 +131,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -142,7 +144,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -154,7 +157,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -166,7 +170,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -175,7 +180,8 @@
       "outbounds":[
         "Direct",
         "HongKong",
-        "TaiWan"
+        "TaiWan",
+        "Proxies"
       ]
     },
     {
@@ -187,7 +193,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ],
       "default": "TaiWan"
     },
@@ -200,7 +207,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -211,7 +219,8 @@
         "TaiWan",
         "Singapore",
         "Japan",
-        "America"
+        "America",
+        "Proxies"
       ],
       "default": "Singapore"
     },
@@ -224,7 +233,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -236,7 +246,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -249,7 +260,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -262,7 +274,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -275,7 +288,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -287,7 +301,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -300,7 +315,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ],
       "default": "Japan"
     },
