@@ -228,26 +228,11 @@
       "default": "Japan"
     },
     {
-      "tag":"China",
-      "type":"selector",
-      "outbounds":[
-        "Direct",
-        "Proxies"
-      ]
-    },
-    {
-      "tag":"AdBlock",
-      "type":"selector",
-      "outbounds":[
-        "Block",
-        "Direct"
-      ]
-    },
-    {
       "tag":"HongKong",
       "type":"selector",
       "outbounds":[
         "{all}",
+        "CloudFlare Warp",
         "Proxies"
       ],
       "filter":[
@@ -259,6 +244,7 @@
       "type":"selector",
       "outbounds":[
         "{all}",
+        "CloudFlare Warp",
         "Proxies"
       ],
       "filter":[
@@ -270,6 +256,7 @@
       "type":"selector",
       "outbounds":[
         "{all}",
+        "CloudFlare Warp",
         "Proxies"
       ],
       "filter":[
@@ -281,6 +268,7 @@
       "type":"selector",
       "outbounds":[
         "{all}",
+        "CloudFlare Warp",
         "Proxies"
       ],
       "filter":[
@@ -292,6 +280,7 @@
       "type":"selector",
       "outbounds":[
         "{all}",
+        "CloudFlare Warp",
         "Proxies"
       ],
       "filter":[
@@ -303,6 +292,7 @@
       "type":"selector",
       "outbounds":[
         "{all}",
+        "CloudFlare Warp",
         "Proxies"
       ],
       "filter":[
@@ -313,7 +303,8 @@
       "tag":"Auto",
       "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        "CloudFlare Warp"
       ],
       "filter":[
         {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}
@@ -333,6 +324,22 @@
     {
       "type": "block",
       "tag": "Block"
+    },
+    {
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:85e2:5f36:7a0d:8ab3:367d/128"
+      ],
+      "mtu": 1280,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "pre_shared_key": "",
+      "private_key": "qHgHJgxkk5tnkLSDSF8giNQS6O1zoW3XKIFIwEg8P0Q=",
+      "reserved": "/oy9",
+      "server": "cdn.teasalo.cloudns.org",
+      "server_port": 2408,
+      "type": "wireguard",
+      "domain_strategy": "",
+      "tag": "CloudFlare Warp"
     }
   ],
   "route": {
@@ -354,7 +361,7 @@
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "outbound": "AdBlock"
+        "outbound": "Block"
       },
       {
         "clash_mode": "direct",
@@ -487,11 +494,11 @@
       },
       {
         "rule_set": "geoip-cn",
-        "outbound": "China"
+        "outbound": "Direct"
       },
       {
         "rule_set": "geosite-cn",
-        "outbound": "China"
+        "outbound": "Direct"
       }
     ],
     "rule_set": [
