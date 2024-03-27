@@ -109,6 +109,18 @@
       ]
     },
     {
+      "tag":"OpenAI",
+      "type":"selector",
+      "outbounds":[
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ],
+      "default": "America"
+    },
+    {
       "tag":"Google",
       "type":"selector",
       "outbounds":[
@@ -148,18 +160,6 @@
       "default": "America"
     },
     {
-      "tag":"OpenAI",
-      "type":"selector",
-      "outbounds":[
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others"
-      ],
-      "default": "America"
-    },
-    {
       "tag":"Asia-Pacific",
       "type":"selector",
       "outbounds":[
@@ -171,18 +171,6 @@
         "Others"
       ],
       "default": "TaiWan"
-    },
-    {
-      "tag":"TikTok",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America"
-      ],
-      "default": "Singapore"
     },
     {
       "tag":"Apple",
@@ -443,11 +431,11 @@
       },
       {
         "rule_set": "geosite-spotify",
-        "outbound": "Google"
+        "outbound": "Messages"
       },
       {
         "rule_set": "geosite-tiktok",
-        "outbound": "TikTok"
+        "outbound": "Asia-Pacific"
       },
       {
         "rule_set": "geoip-netflix",
