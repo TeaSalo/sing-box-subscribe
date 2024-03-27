@@ -104,9 +104,9 @@
       "type":"selector",
       "outbounds":[
         "Auto",
-        "Direct"
-        "{all}",
-        "CloudFlare Warp"
+        "Direct",
+        "CloudFlare Warp",
+        "{all}"
       ]
     },
     {
@@ -816,4 +816,4 @@
       }
     ]
   }
-}
+      }
