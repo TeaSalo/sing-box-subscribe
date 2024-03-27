@@ -305,22 +305,6 @@
       "default": "Japan"
     },
     {
-      "tag":"China",
-      "type":"selector",
-      "outbounds":[
-        "Direct",
-        "Proxies"
-      ]
-    },
-    {
-      "tag":"AdBlock",
-      "type":"selector",
-      "outbounds":[
-        "Block",
-        "Direct"
-      ]
-    },
-    {
       "tag":"HongKong",
       "type":"urltest",
       "outbounds":[
@@ -448,7 +432,7 @@
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "outbound": "AdBlock"
+        "outbound": "Block"
       },
       {
         "clash_mode": "direct",
@@ -581,11 +565,11 @@
       },
       {
         "rule_set": "geoip-cn",
-        "outbound": "China"
+        "outbound": "Direct"
       },
       {
         "rule_set": "geosite-cn",
-        "outbound": "China"
+        "outbound": "Direct"
       }
     ],
     "rule_set": [
