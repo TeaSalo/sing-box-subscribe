@@ -104,9 +104,9 @@
       "type":"selector",
       "outbounds":[
         "Auto",
-        "Direct"
-        "{all}",
+        "Direct",
         "CloudFlare Warp"
+        "{all}"
       ]
     },
     {
@@ -229,6 +229,22 @@
       "default": "Japan"
     },
     {
+      "tag":"China",
+      "type":"selector",
+      "outbounds":[
+        "Direct",
+        "Proxies"
+      ]
+    },
+    {
+      "tag":"AdBlock",
+      "type":"selector",
+      "outbounds":[
+        "Block",
+        "Direct"
+      ]
+    },
+    {
       "tag":"HongKong",
       "type":"urltest",
       "outbounds":[
@@ -288,7 +304,8 @@
       "type":"selector",
       "outbounds":[
         "{all}",
-        "CloudFlare Warp"
+        "CloudFlare Warp",
+        "Proxies"
       ],
       "filter":[
         {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美"]}
@@ -356,7 +373,7 @@
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "outbound": "Block"
+        "outbound": "AdBlock"
       },
       {
         "clash_mode": "direct",
@@ -489,11 +506,11 @@
       },
       {
         "rule_set": "geoip-cn",
-        "outbound": "Direct"
+        "outbound": "China"
       },
       {
         "rule_set": "geosite-cn",
-        "outbound": "Direct"
+        "outbound": "China"
       }
     ],
     "rule_set": [
