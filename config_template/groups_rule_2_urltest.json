@@ -228,26 +228,11 @@
       "default": "Japan"
     },
     {
-      "tag":"China",
-      "type":"selector",
-      "outbounds":[
-        "Direct",
-        "Proxies"
-      ]
-    },
-    {
-      "tag":"AdBlock",
-      "type":"selector",
-      "outbounds":[
-        "Block",
-        "Direct"
-      ]
-    },
-    {
       "tag":"HongKong",
       "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        “Block”
       ],
       "filter":[
         {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
@@ -257,7 +242,8 @@
       "tag":"TaiWan",
       "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        “Block”
       ],
       "filter":[
         {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
@@ -267,7 +253,8 @@
       "tag":"Singapore",
       "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        “Block”
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
@@ -277,7 +264,8 @@
       "tag":"Japan",
       "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        “Block”
       ],
       "filter":[
         {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
@@ -287,7 +275,8 @@
       "tag":"America",
       "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        “Block”
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
@@ -349,7 +338,7 @@
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "outbound": "AdBlock"
+        "outbound": "Block"
       },
       {
         "clash_mode": "direct",
@@ -482,11 +471,11 @@
       },
       {
         "rule_set": "geoip-cn",
-        "outbound": "China"
+        "outbound": "Direct"
       },
       {
         "rule_set": "geosite-cn",
-        "outbound": "China"
+        "outbound": "Direct"
       }
     ],
     "rule_set": [
