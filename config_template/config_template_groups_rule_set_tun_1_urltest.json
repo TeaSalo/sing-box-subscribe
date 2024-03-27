@@ -323,7 +323,7 @@
       "tag":"HongKong",
       "type":"selector",
       "outbounds":[
-        "{all}"
+        "{all}",
         "Proxies"
       ],
       "filter":[
@@ -334,7 +334,7 @@
       "tag":"TaiWan",
       "type":"selector",
       "outbounds":[
-        "{all}"
+        "{all}",
         "Proxies"
       ],
       "filter":[
@@ -345,7 +345,7 @@
       "tag":"Singapore",
       "type":"selector",
       "outbounds":[
-        "{all}"
+        "{all}",
         "Proxies"
       ],
       "filter":[
@@ -356,7 +356,7 @@
       "tag":"Japan",
       "type":"selector",
       "outbounds":[
-        "{all}"
+        "{all}",
         "Proxies"
       ],
       "filter":[
@@ -367,7 +367,7 @@
       "tag":"America",
       "type":"selector",
       "outbounds":[
-        "{all}"
+        "{all}",
         "Proxies"
       ],
       "filter":[
