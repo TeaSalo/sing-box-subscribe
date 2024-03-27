@@ -49,7 +49,7 @@
       },
       {
         "outbound": "any",
-        "server": "Proxies",
+        "server": "Ali",
         "disable_cache": true
       },
       {
@@ -631,7 +631,7 @@
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili.srs",
-        "download_detour": "direct"
+        "download_detour": "Direct"
       },
       {
         "tag": "geosite-bahamut",
