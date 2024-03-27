@@ -105,6 +105,7 @@
       "outbounds":[
         "Auto",
         "Direct",
+        "Cloudflare Dy",
         "CloudFlare Warp",
         "{all}"
       ]
@@ -302,6 +303,7 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
+        "Cloudflare Dy",
         "CloudFlare Warp"
       ],
       "filter":[
@@ -313,6 +315,7 @@
       "type":"selector",
       "outbounds":[
         "{all}",
+        "Cloudflare Dy",
         "CloudFlare Warp",
         "Proxies"
       ],
@@ -325,6 +328,7 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
+        "Cloudflare Dy",
         "CloudFlare Warp"
       ],
       "filter":[
@@ -345,6 +349,33 @@
     {
       "type": "block",
       "tag": "Block"
+    },
+    {
+      "packet_encoding": "",
+      "server": "cdn.teasalo.cloudns.org",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "test.teasalo.cloudns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "test.teasalo.cloudns.org"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "Cloudflare Dy"
     },
     {
       "local_address": [
