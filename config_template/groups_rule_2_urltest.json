@@ -104,9 +104,9 @@
       "type":"selector",
       "outbounds":[
         "Auto",
-        "Direct",
-        "CloudFlare Warp",
-        "{all}"
+        "Direct"
+        "{all}",
+        "CloudFlare Warp"
       ]
     },
     {
@@ -288,8 +288,7 @@
       "type":"selector",
       "outbounds":[
         "{all}",
-        "CloudFlare Warp",
-        "Proxies"
+        "CloudFlare Warp"
       ],
       "filter":[
         {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美"]}
