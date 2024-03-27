@@ -20,17 +20,17 @@
   "dns": {
     "servers": [
       {
-        "tag": "proxyDns",
-        "address": "tls://8.8.8.8",
-        "detour": "proxy"
+        "tag": "Cloudflare",
+        "address": "https://1.1.1.1/dns-query",
+        "detour": "Proxies"
       },
       {
-        "tag": "localDns",
+        "tag": "Ali",
         "address": "https://223.5.5.5/dns-query",
-        "detour": "direct"
+        "detour": "Direct"
       },
       {
-        "tag": "block",
+        "tag": "Block",
         "address": "rcode://success"
       }
     ],
@@ -41,24 +41,24 @@
           "cdn.jsdelivr.net",
           "testingcf.jsdelivr.net"
         ],
-        "server": "localDns"
+        "server": "Ali"
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "server": "block"
+        "server": "Block"
       },
       {
         "outbound": "any",
-        "server": "localDns",
+        "server": "Ali",
         "disable_cache": true
       },  
       {
         "clash_mode": "direct",
-        "server": "localDns"
+        "server": "Ali"
       },
       {
         "clash_mode": "global",
-        "server": "proxyDns"
+        "server": "Cloudflare"
       }
     ],
     "strategy": "ipv4_only"
@@ -66,8 +66,8 @@
   "inbounds": [
     {
       "type": "tun",
-      "inet4_address": "172.19.0.1/30",
-      "mtu": 9000,
+      "inet4_address": "172.16.0.1/30",
+      "mtu": 1375,
       "auto_route": true,
       "strict_route": true,
       "sniff": true,
@@ -91,19 +91,21 @@
   ],
   "outbounds": [
     {
-      "tag":"proxy",
+      "tag":"Proxies",
       "type":"selector",
       "outbounds":[
-        "auto",
-        "direct",
+        "Auto",
+        "Direct",
+        "CloudFlare Warp",
         "{all}"
       ]
     },
     {
-      "tag":"auto",
+      "tag":"Auto",
       "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        "CloudFlare Warp"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -111,7 +113,7 @@
     },
     {
       "type": "direct",
-      "tag": "direct"
+      "tag": "Direct"
     },
     {
       "type": "dns",
@@ -119,12 +121,28 @@
     },
     {
       "type": "block",
-      "tag": "block"
+      "tag": "Block"
+    },
+    {
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:85e2:5f36:7a0d:8ab3:367d/128"
+      ],
+      "mtu": 1280,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "pre_shared_key": "",
+      "private_key": "qHgHJgxkk5tnkLSDSF8giNQS6O1zoW3XKIFIwEg8P0Q=",
+      "reserved": "/oy9",
+      "server": "cdn.teasalo.cloudns.org",
+      "server_port": 2408,
+      "type": "wireguard",
+      "domain_strategy": "",
+      "tag": "CloudFlare Warp"
     }
   ],
   "route": {
     "auto_detect_interface": true,
-    "final": "proxy",
+    "final": "Proxies",
     "rules": [
       {
         "protocol": "dns",
@@ -133,19 +151,19 @@
       {
         "network": "udp",
         "port": 443,
-        "outbound": "block"
+        "outbound": "Block"
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "outbound": "block"
+        "outbound": "Block"
       },
       {
         "clash_mode": "direct",
-        "outbound": "direct"
+        "outbound": "Direct"
       },
       {
         "clash_mode": "global",
-        "outbound": "proxy"
+        "outbound": "Proxies"
       },
       {
         "domain": [
@@ -154,7 +172,7 @@
           "yacd.haishan.me",
           "d.metacubex.one"
         ],
-        "outbound": "direct"
+        "outbound": "Direct"
       }
     ],
     "rule_set": [
@@ -163,7 +181,7 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
-        "download_detour": "direct"
+        "download_detour": "Direct"
       }
     ]
   }
