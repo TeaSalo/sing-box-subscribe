@@ -117,7 +117,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ],
       "default": "America"
     },
@@ -130,7 +131,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ],
       "default": "Japan"
     },
@@ -143,7 +145,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ],
       "default": "Japan"
     },
@@ -156,7 +159,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ],
       "default": "America"
     },
@@ -169,7 +173,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ],
       "default": "TaiWan"
     },
@@ -183,7 +188,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ],
       "default": "America"
     },
@@ -197,7 +203,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ],
       "default": "Japan"
     },
@@ -211,7 +218,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ]
     },
     {
@@ -224,7 +232,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxies"
       ],
       "default": "Japan"
     },
