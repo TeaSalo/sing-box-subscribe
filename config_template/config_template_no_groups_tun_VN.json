@@ -107,8 +107,8 @@
         "{all}",
         "CloudFlare Warp"
       ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
       "tolerance": 50
     },
     {
