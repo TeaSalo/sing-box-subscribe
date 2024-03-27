@@ -49,7 +49,7 @@
       },
       {
         "outbound": "any",
-        "server": "Ali",
+        "server": "Proxies",
         "disable_cache": true
       },
       {
