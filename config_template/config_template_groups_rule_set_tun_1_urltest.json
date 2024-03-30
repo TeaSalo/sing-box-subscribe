@@ -105,7 +105,7 @@
       "outbounds":[
         "Auto",
         "Direct",
-        "CloudFlare Warp",
+        "♥CloudFlare Warp",
         "{all}"
       ]
     },
@@ -133,7 +133,8 @@
         "America",
         "Others",
         "Proxies"
-      ]
+      ],
+      "default": "Japan"
     },
     {
       "tag":"Telegram",
@@ -146,7 +147,8 @@
         "America",
         "Others",
         "Proxies"
-      ]
+      ],
+      "default": "Japan"
     },
     {
       "tag":"Twitter",
@@ -159,7 +161,8 @@
         "America",
         "Others",
         "Proxies"
-      ]
+      ],
+      "default": "Japan"
     },
     {
       "tag":"Facebook",
@@ -172,7 +175,8 @@
         "America",
         "Others",
         "Proxies"
-      ]
+      ],
+      "default": "Japan"
     },
     {
       "tag":"BiliBili",
@@ -209,7 +213,8 @@
         "America",
         "Others",
         "Proxies"
-      ]
+      ],
+      "default": "Japan"
     },
     {
       "tag":"TikTok",
@@ -235,7 +240,8 @@
         "America",
         "Others",
         "Proxies"
-      ]
+      ],
+      "default": "America"
     },
     {
       "tag":"Disney+",
@@ -248,7 +254,8 @@
         "America",
         "Others",
         "Proxies"
-      ]
+      ],
+      "default": "America"
     },
     {
       "tag":"Apple",
@@ -262,7 +269,8 @@
         "America",
         "Others",
         "Proxies"
-      ]
+      ],
+      "default": "America"
     },
     {
       "tag":"Microsoft",
@@ -276,7 +284,8 @@
         "America",
         "Others",
         "Proxies"
-      ]
+      ],
+      "default": "Japan"
     },
     {
       "tag":"Games",
@@ -303,7 +312,8 @@
         "America",
         "Others",
         "Proxies"
-      ]
+      ],
+      "default": "America"
     },
     {
       "tag":"Global",
@@ -341,62 +351,77 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "CloudFlare Warp"
+        "♥CloudFlare Warp"
       ],
       "filter":[
         {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
-      ]
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
     },
     {
       "tag":"TaiWan",
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "CloudFlare Warp"
+        "♥CloudFlare Warp"
       ],
       "filter":[
         {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
-      ]
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
     },
     {
       "tag":"Singapore",
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "CloudFlare Warp"
+        "♥CloudFlare Warp"
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
-      ]
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
     },
     {
       "tag":"Japan",
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "CloudFlare Warp"
+        "♥CloudFlare Warp"
       ],
       "filter":[
         {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
-      ]
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
     },
     {
       "tag":"America",
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "CloudFlare Warp"
+        "♥CloudFlare Warp"
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
-      ]
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
     },
     {
       "tag":"Others",
       "type":"selector",
       "outbounds":[
         "{all}",
-        "CloudFlare Warp",
+        "♥CloudFlare Warp",
         "Proxies"
       ],
       "filter":[
@@ -408,7 +433,7 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "CloudFlare Warp"
+        "♥CloudFlare Warp"
       ],
       "filter":[
         {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}
@@ -443,7 +468,7 @@
       "server_port": 2408,
       "type": "wireguard",
       "domain_strategy": "",
-      "tag": "CloudFlare Warp"
+      "tag": "♥CloudFlare Warp"
     }
   ],
   "route": {
