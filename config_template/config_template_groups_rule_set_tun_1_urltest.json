@@ -364,8 +364,7 @@
         "♥HKG 01",
         "♥Cloudflare 01",
         "♥Cloudflare 02",
-        "♥Cloudflare 03",
-        "♥Cloudflare 04"
+        "♥Cloudflare 03"
       ],
       "filter":[
         {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
@@ -382,8 +381,7 @@
         "♥TPE 01_AS-TW",
         "♥Cloudflare 01",
         "♥Cloudflare 02",
-        "♥Cloudflare 03",
-        "♥Cloudflare 04"
+        "♥Cloudflare 03"
       ],
       "filter":[
         {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
@@ -400,8 +398,7 @@
         "♥SIN 02_AS-SG",
         "♥Cloudflare 01",
         "♥Cloudflare 02",
-        "♥Cloudflare 03",
-        "♥Cloudflare 04"
+        "♥Cloudflare 03"
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
@@ -418,8 +415,7 @@
         "♥KIX 03_AS-JP",
         "♥Cloudflare 01",
         "♥Cloudflare 02",
-        "♥Cloudflare 03",
-        "♥Cloudflare 04"
+        "♥Cloudflare 03"
       ],
       "filter":[
         {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
@@ -436,7 +432,7 @@
         "♥Cloudflare 01",
         "♥Cloudflare 02",
         "♥Cloudflare 03",
-        "♥CloudFlare 04"
+        "♥Cloudflare 04"
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
