@@ -101,7 +101,7 @@ python main.py --template_index=0
 
 # 致谢
 
--[@Toperlock](https://github.com/Toperlock)
+感谢[@Toperlock](https://github.com/Toperlock)大佬长期以来的无偿维护与默默付出！ 
 
 - [xream](https://github.com/xream)
 - [sing-box](https://github.com/SagerNet/sing-box)
