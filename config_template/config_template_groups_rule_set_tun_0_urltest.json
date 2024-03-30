@@ -105,8 +105,15 @@
       "outbounds":[
         "Auto",
         "Direct",
-        "♥CloudFlare Warp",
-        "{all}"
+        "{all}",
+        "♥TPE 01_AS-TW",
+        "♥SIN 02_AS-SG",
+        "♥KIX 03_AS-JP",
+        "♥HKG 01",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥Cloudflare 04"
       ]
     },
     {
@@ -351,13 +358,17 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥CloudFlare Warp"
+        "♥HKG 01",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥CloudFlare 04"
       ],
       "filter":[
         {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
+      "interval": "1m",
       "tolerance": 50
     },
     {
@@ -365,13 +376,17 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥CloudFlare Warp"
+        "♥TPE 01_AS-TW",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥CloudFlare 04"
       ],
       "filter":[
         {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
+      "interval": "1m",
       "tolerance": 50
     },
     {
@@ -379,13 +394,17 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥CloudFlare Warp"
+        "♥SIN 02_AS-SG",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥CloudFlare 04"
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
+      "interval": "1m",
       "tolerance": 50
     },
     {
@@ -393,13 +412,17 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥CloudFlare Warp"
+        "♥KIX 03_AS-JP",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥CloudFlare 04"
       ],
       "filter":[
         {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
+      "interval": "1m",
       "tolerance": 50
     },
     {
@@ -407,13 +430,16 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥CloudFlare Warp"
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥CloudFlare 04"
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
+      "interval": "1m",
       "tolerance": 50
     },
     {
@@ -421,11 +447,14 @@
       "type":"selector",
       "outbounds":[
         "{all}",
-        "♥CloudFlare Warp",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥CloudFlare 04",
         "Proxies"
       ],
       "filter":[
-        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美|网站|地址|剩余|过期|时间|有效|关注|TG|tg"]}
+        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美|网站|地址|剩余|过期|时间|有效|关注|频道|TG|tg"]}
       ]
     },
     {
@@ -433,10 +462,17 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥CloudFlare Warp"
+        "♥TPE 01_AS-TW",
+        "♥SIN 02_AS-SG",
+        "♥KIX 03_AS-JP",
+        "♥HKG 01",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥Cloudflare 04"
       ],
       "filter":[
-        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效|关注|TG|tg"]}
+        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效|关注|频道|TG|tg"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -455,20 +491,220 @@
       "tag": "Block"
     },
     {
-      "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:85e2:5f36:7a0d:8ab3:367d/128"
-      ],
-      "mtu": 1280,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "pre_shared_key": "",
-      "private_key": "qHgHJgxkk5tnkLSDSF8giNQS6O1zoW3XKIFIwEg8P0Q=",
-      "reserved": "/oy9",
-      "server": "cdn.teasalo.cloudns.org",
-      "server_port": 2408,
-      "type": "wireguard",
+      "packet_encoding": "",
+      "server": "tpe1.cf-ip.rr.nu",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dy.teasalo.cloudns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "dy.teasalo.cloudns.org"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "type": "vless",
       "domain_strategy": "",
-      "tag": "♥CloudFlare Warp"
+      "tag": "♥TPE 01_AS-TW"
+    },
+    {
+      "packet_encoding": "",
+      "server": "sin2.cf-ip.rr.nu",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dy.teasalo.cloudns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "dy.teasalo.cloudns.org"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "♥SIN 02_AS-SG"
+    },
+    {
+      "packet_encoding": "",
+      "server": "kix3.cf-ip.rr.nu",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dy.teasalo.cloudns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "dy.teasalo.cloudns.org"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "♥KIX 03_AS-JP"
+    },
+    {
+      "packet_encoding": "",
+      "server": "103.44.255.27",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dy.teasalo.cloudns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "dy.teasalo.cloudns.org"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "♥HKG 01"
+    },
+    {
+      "packet_encoding": "",
+      "server": "www.visa.co.jp",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dy.teasalo.cloudns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "dy.teasalo.cloudns.org"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "♥Cloudflare 01"
+    },
+    {
+      "packet_encoding": "",
+      "server": "www.visa.com.tw",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dy.teasalo.cloudns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "dy.teasalo.cloudns.org"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "♥Cloudflare 02"
+    },
+    {
+      "packet_encoding": "",
+      "server": "www.visa.com.sg",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dy.teasalo.cloudns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "dy.teasalo.cloudns.org"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "♥Cloudflare 03"
+    },
+    {
+      "packet_encoding": "",
+      "server": "www.visa.com.hk",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "dy.teasalo.cloudns.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "dy.teasalo.cloudns.org"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "♥Cloudflare 04"
     }
   ],
   "route": {
