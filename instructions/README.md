@@ -35,7 +35,7 @@ Example: https://sfa.teasalo.cloudns.org/config/https://gist.githubusercontent.c
 Use `|` to connect the two sub links and then [URL encode](https://www.urlencoder.org/) and put them after `config/`, as shown in the figure:
 
 <div align="left">
-  <img src="https://github.com/TeaSalo/sing-box-subscribe/assets/86833913/5ed8e9de-3296-4dfc-ad65-2e181017829e" alt="how-to-use" width="50%" />
+  <img src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/5ed8e9de-3296-4dfc-ad65-2e181017829e" alt="how-to-use" width="50%" />
 </div>
 
 Example: https://sfa.teasalo.cloudns.org/config/https%3A%2F%2Fgist.githubusercontent.com%2FToperlock%2Fb1ca381c32820e8c79669cbbd85b68ac%2Fraw%2Fdafae92fbe48ff36dae6e5172caa1cfd7914cda4%2Fgistfile1.txt%7Chttps%3A%2F%2Fgist.githubusercontent.com%2FToperlock%2Ffa2fdc5f827ff7d288c23d568db75412%2Fraw%2F6c3b725da347f57b0021b806dfca5f51e1660746%2F1.yaml
@@ -98,9 +98,9 @@ Example: https://sfa.teasalo.cloudns.org/config/https://gist.githubusercontent.c
 
 After you have forked the project, due to Github's limitations, you need to manually go to the Actions page of the project you have forked to enable Workflows and enable Upstream Sync Action, which will turn on the hourly auto-updates:
 
-![AutoUpdate](https://github.com/TeaSalo/ChatGPT-Next-Web/raw/main/docs/images/enable-actions.jpg)
+![AutoUpdate](https://github.com/Toperlock/ChatGPT-Next-Web/raw/main/docs/images/enable-actions.jpg)
 
-![Enable Automatic Updates](https://github.com/TeaSalo/ChatGPT-Next-Web/raw/main/docs/images/enable-actions-sync.jpg)
+![Enable Automatic Updates](https://github.com/Toperlock/ChatGPT-Next-Web/raw/main/docs/images/enable-actions-sync.jpg)
 
 ### Manual update code
 
@@ -119,28 +119,28 @@ Android use chrome browser to open the webpage to generate the configuration fil
 **Note that after clicking Save, go to Generate Configuration File as soon as possible, otherwise the content you fill in will remain on the webpage, and other people can browse to it when they open the website. Can't think of a solution at the moment**
 
 <div align="left">
-  <img src="https://github.com/TeaSalo/sing-box-subscribe/assets/86833913/f794806c-edfc-4951-a216-6e38646f3791" alt="how-to-use" width="50%" />
+  <img src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/f794806c-edfc-4951-a216-6e38646f3791" alt="how-to-use" width="50%" />
 </div>
 
 ## 🎬 Demonstration video
 
 |Web parsing sub link|Web parsing URI links|
 |-----------------------------|-----------------------------|
-|<video controls width="250" src="https://github.com/TeaSalo/sing-box-subscribe/assets/86833913/9f8f1a70-58b1-4117-a650-f956d9249e43"></video>|<video controls width="250" src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/63e180ad-eead-433f-8ee8-73055dafbd56"></video>|
+|<video controls width="250" src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/9f8f1a70-58b1-4117-a650-f956d9249e43"></video>|<video controls width="250" src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/63e180ad-eead-433f-8ee8-73055dafbd56"></video>|
 
 |Android Chrome page shrink|Web directly parse base64|
 |-----------------------------|-----------------------------|
-|<video controls width="250" src="https://github.com/TeaSalo/sing-box-subscribe/assets/86833913/cb149206-307f-4de8-9968-9832dcf8268a"></video>|<video controls width="250" src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/0081f055-2cd4-46bb-a4a9-7aac7d5f93a5"></video>|
+|<video controls width="250" src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/cb149206-307f-4de8-9968-9832dcf8268a"></video>|<video controls width="250" src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/0081f055-2cd4-46bb-a4a9-7aac7d5f93a5"></video>|
 
 |Local parsing sub link|Local parsing URI links|
 |-----------------------------|-----------------------------|
-|<video controls width="250" src="https://github.com/TeaSalo/sing-box-subscribe/assets/86833913/12da95a3-aae9-4ae4-ab88-774ed54f3217"></video>|<video controls width="250" src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/7e93568d-ece6-4cba-8dd0-bc5b5e64ade7"></video>|
+|<video controls width="250" src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/12da95a3-aae9-4ae4-ab88-774ed54f3217"></video>|<video controls width="250" src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/7e93568d-ece6-4cba-8dd0-bc5b5e64ade7"></video>|
 
 # II. Local installation
 ### Install [Python](https://www.python.org/) version 3.10 or above on your PC. Make sure to add Python to your system environment variables (follow Google's installation steps).
 
 <div align="left">
-  <img src="https://github.com/TeaSalo/sing-box-subscribe/assets/86833913/f387322b-a602-40df-b3b6-95561329f2f8" alt="install" width="60%" />
+  <img src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/f387322b-a602-40df-b3b6-95561329f2f8" alt="install" width="60%" />
 </div>
 
 ### In the terminal, input the following command to install dependencies (on Mac, replace `pip` with `pip3`):
@@ -150,13 +150,13 @@ pip install -r requirements.txt
 ```
 
 <div align="left">
-  <img src="https://github.com/TeaSalo/sing-box-subscribe/assets/86833913/0fc03b49-4c57-4ef3-a4fc-044c1a108d75" alt="install" width="60%" />
+  <img src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/0fc03b49-4c57-4ef3-a4fc-044c1a108d75" alt="install" width="60%" />
 </div>
 
 ### Download the `sing-box-subscribe` project and open the terminal to navigate to the project directory (you can directly type `cmd` in the file path).
 
 <div align="left">
-  <img src="https://github.com/TeaSalo/sing-box-subscribe/assets/86833913/73f05ba8-105c-4f10-8e6c-16e27f26c084" alt="run" width="60%" />
+  <img src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/73f05ba8-105c-4f10-8e6c-16e27f26c084" alt="run" width="60%" />
 </div>
 
 ### Put your subscription links in `providers.json`, edit `config_template_groups_tun.json` file and use the following command to run the script after editing the template:
@@ -258,7 +258,7 @@ In this file, you can add subscription links and basic settings.
       <summary>tag screenshot reference</summary>
 
 <div align="left">
-  <img src="https://github.com/TeaSalo/sing-box-subscribe/assets/86833913/781c5bb7-c5c5-467e-a6ae-05ff44a19973" alt="download" width="65%" />
+  <img src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/781c5bb7-c5c5-467e-a6ae-05ff44a19973" alt="download" width="65%" />
 </div>
 
 </details>
@@ -397,7 +397,7 @@ Multiple rules will be executed in order.
       <summary>Windows sing-box folder contents</summary>
  
 <div align="left">
-  <img src="https://github.com/TeaSalo/sing-box-subscribe/assets/86833913/c6a815bf-b542-43c6-aeb6-84020586a1f1" alt="download" width="50%" />
+  <img src="https://github.com/Toperlock/sing-box-subscribe/assets/86833913/c6a815bf-b542-43c6-aeb6-84020586a1f1" alt="download" width="50%" />
 </div>
 
 </details>
