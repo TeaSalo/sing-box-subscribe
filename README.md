@@ -1,4 +1,4 @@
-# 操作说明去看[英文文档](https://github.com/Toperlock/sing-box-subscribe/blob/main/instructions/README.md)，中文文档操作说明不再提供
+# 操作说明去看[英文文档](https://github.com/TeaSalo/sing-box-subscribe/blob/main/instructions/README.md)，中文文档操作说明不再提供
 
 # 免责声明：sing-box-subscribe.vercel.app域名目前已被其他人占用，与本项目无关。后果自负
 ![image](https://github.com/Toperlock/sing-box-subscribe/assets/86833913/f9af80bc-f1b7-45dd-a2eb-e26910069f21)
