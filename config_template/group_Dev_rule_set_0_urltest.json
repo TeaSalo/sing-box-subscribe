@@ -673,11 +673,11 @@
       },
       {
         "network": "udp",
-        "outbound": "AdBlack"
+        "outbound": "Black"
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "outbound": "Black"
+        "outbound": "AdBlack"
       }
     ],
     "rule_set": [
