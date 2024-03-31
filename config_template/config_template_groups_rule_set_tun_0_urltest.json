@@ -109,7 +109,11 @@
         "♥TPE 01_AS-TW",
         "♥SIN 02_AS-SG",
         "♥KIX 03_AS-JP",
-        "♥HKG 01"
+        "♥HKG 01",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥Cloudflare 04"
       ],
       "filter":[
         {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|TG|tg|t.me"]}
@@ -357,7 +361,10 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥HKG 01"
+        "♥HKG 01",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03"
       ],
       "filter":[
         {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
@@ -371,7 +378,10 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥TPE 01_AS-TW"
+        "♥TPE 01_AS-TW",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03"
       ],
       "filter":[
         {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
@@ -385,7 +395,10 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥SIN 02_AS-SG"
+        "♥SIN 02_AS-SG",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03"
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
@@ -399,7 +412,10 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥KIX 03_AS-JP"
+        "♥KIX 03_AS-JP",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03"
       ],
       "filter":[
         {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
@@ -413,10 +429,10 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥TPE 01_AS-TW",
-        "♥SIN 02_AS-SG",
-        "♥KIX 03_AS-JP",
-        "♥HKG 01"
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥Cloudflare 04"
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
@@ -430,10 +446,10 @@
       "type":"selector",
       "outbounds":[
         "{all}",
-        "♥TPE 01_AS-TW",
-        "♥SIN 02_AS-SG",
-        "♥KIX 03_AS-JP",
-        "♥HKG 01",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥Cloudflare 04",
         "Proxies"
       ],
       "filter":[
@@ -448,10 +464,14 @@
         "♥TPE 01_AS-TW",
         "♥SIN 02_AS-SG",
         "♥KIX 03_AS-JP",
-        "♥HKG 01"
+        "♥HKG 01",
+        "♥Cloudflare 01",
+        "♥Cloudflare 02",
+        "♥Cloudflare 03",
+        "♥Cloudflare 04"
       ],
       "filter":[
-        {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|到期|探针|有效|关注|频道|TG|tg|t.me"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -469,7 +489,7 @@
       "type": "block",
       "tag": "Block"
     },
-    {{
+    {
       "packet_encoding": "",
       "server": "tpe1.cf-ip.rr.nu",
       "server_port": 443,
@@ -577,6 +597,114 @@
       "domain_strategy": "",
       "tag": "♥HKG 01"
     },
+    {
+      "packet_encoding": "",
+      "server": "www.visa.co.jp",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "mositr.freenods.sbs",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "mositr.freenods.sbs"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "♥Cloudflare 01"
+    },
+    {
+      "packet_encoding": "",
+      "server": "www.visa.com.tw",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "mositr.freenods.sbs",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "mositr.freenods.sbs"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "♥Cloudflare 02"
+    },
+    {
+      "packet_encoding": "",
+      "server": "www.visa.com.sg",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "mositr.freenods.sbs",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "mositr.freenods.sbs"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "♥Cloudflare 03"
+    },
+    {
+      "packet_encoding": "",
+      "server": "www.visa.com.hk",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "mositr.freenods.sbs",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "mositr.freenods.sbs"
+        },
+        "max_early_data": 2048,
+        "path": "/",
+        "type": "ws"
+      },
+      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "type": "vless",
+      "domain_strategy": "",
+      "tag": "♥Cloudflare 04"
+    }
   ],
   "route": {
     "auto_detect_interface": true,
