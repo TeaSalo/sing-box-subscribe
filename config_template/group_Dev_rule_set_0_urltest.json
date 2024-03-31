@@ -18,7 +18,7 @@
         "detour": "Direct"
       },
       {
-        "tag": "Black",
+        "tag": "Block",
         "address": "rcode://success"
       }
     ],
@@ -51,7 +51,7 @@
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "server": "Black"
+        "server": "Block"
       }
     ],
     "final": "Cloudflare",
@@ -673,11 +673,12 @@
       },
       {
         "network": "udp",
-        "outbound": "Black"
+        "port": 443,
+        "outbound": "Block"
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "outbound": "AdBlack"
+        "outbound": "AdBlock"
       }
     ],
     "rule_set": [
