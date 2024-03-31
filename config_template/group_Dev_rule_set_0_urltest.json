@@ -161,6 +161,20 @@
       "default": "America"
     },
     {
+      "tag":"Asia-Pacific",
+      "type":"selector",
+      "outbounds":[
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others",
+        "Proxies"
+      ],
+      "default": "Singapore"
+    },
+    {
       "tag":"China",
       "type":"selector",
       "outbounds":[
@@ -612,7 +626,7 @@
           "geoip-twitter",
           "geoip-facebook"
         ],
-        "outbound": "Messages"
+        "outbound": "Message"
       },
       {
         "rule_set": [
