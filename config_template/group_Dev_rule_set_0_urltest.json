@@ -545,6 +545,7 @@
           "yacd.metacubex.one",
           "yacd.haishan.me",
           "d.metacubex.one"
+          ]
           },
           {
             "domain_keyword": "baidu"
@@ -577,6 +578,7 @@
             "geosite-amazon",
             "geosite-microsoft",
             "geosite-geolocation-!cn"
+            ]
           },
           {
             "clash_mode": "Global"
@@ -593,15 +595,14 @@
         "outbound": "OpenAI"
       },
       {
-        "rule_set": [
-        "geoip-google",
+        "rule_set": "geoip-google",
         "outbound": "Google"
       },
       {
         "rule_set": [
         "geosite-google",
         "geosite-youtube",
-        "geosite-github",
+        "geosite-github"
         ],
         "outbound": "Google"
       },
@@ -875,7 +876,7 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-tiktok.srs",
         "download_detour": "Proxies"
-      },
+      }
     ],
     "final": "Proxies",
     "auto_detect_interface": true
