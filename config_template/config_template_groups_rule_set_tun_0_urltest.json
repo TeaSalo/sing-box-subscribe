@@ -469,29 +469,29 @@
       "type": "block",
       "tag": "Block"
     },
-    {
+    {{
       "packet_encoding": "",
       "server": "tpe1.cf-ip.rr.nu",
       "server_port": 443,
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "dy.teasalo.cloudns.org",
+        "server_name": "mositr.freenods.sbs",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "dy.teasalo.cloudns.org"
+          "Host": "mositr.freenods.sbs"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥TPE 01_AS-TW"
@@ -503,22 +503,22 @@
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "dy.teasalo.cloudns.org",
+        "server_name": "mositr.freenods.sbs",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "dy.teasalo.cloudns.org"
+          "Host": "mositr.freenods.sbs"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥SIN 02_AS-SG"
@@ -530,22 +530,22 @@
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "dy.teasalo.cloudns.org",
+        "server_name": "mositr.freenods.sbs",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "dy.teasalo.cloudns.org"
+          "Host": "mositr.freenods.sbs"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥KIX 03_AS-JP"
@@ -557,26 +557,26 @@
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "dy.teasalo.cloudns.org",
+        "server_name": "mositr.freenods.sbs",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "dy.teasalo.cloudns.org"
+          "Host": "mositr.freenods.sbs"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
+      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥HKG 01"
-    }
+    },
   ],
   "route": {
     "auto_detect_interface": true,
