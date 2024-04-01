@@ -687,12 +687,7 @@
         "outbound": "Streaming"
       },
       {
-        "rule_set": "geoip-bilibili",
-        "outbound": "Asia-Pacific"
-      },
-      {
         "rule_set": [
-          "geosite-bilibili",
           "geosite-bahamut",
           "geosite-tiktok"
         ],
@@ -702,7 +697,9 @@
         "domain_suffix": ".cn",
         "rule_set": [
           "geoip-cn",
-          "geosite-cn"
+          "geosite-cn",
+          "geoip-bilibili",
+          "geosite-bilibili"
         ],
         "outbound": "China"
       },
