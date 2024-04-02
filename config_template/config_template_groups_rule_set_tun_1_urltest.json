@@ -426,6 +426,12 @@
       "tag": "Block"
     },
     {
+      "tag": "loop",
+      "type": "socks",
+      "server": "127.0.0.1",
+      "server_port": 7891
+    },
+    {
       "method": "none",
       "password": "",
       "server": "127.0.0.1",
@@ -799,6 +805,13 @@
       {
         "rule_set": "geosite-cn",
         "outbound": "China"
+      },
+      {
+        "inbound": [
+          "tun",
+          "mixed"
+        ],
+        "outbound": "loop"
       }
     ],
     "rule_set": [
