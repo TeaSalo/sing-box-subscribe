@@ -5,7 +5,7 @@
 ### 使用 `/config/URL` 添加参数符号已修改，从原来的 `/&` 改为 `&`。有问题请提issue，不要打扰 `sing-box`
 
 ```
-https://xxxxxxx.vercel.app/config/https://xxxxxxsubscribe?token=123456&file=https://github.com/Toperlock/sing-box-subscribe/raw/main/config_template/config_template_groups_rule_set_tun.json
+https://xxxxxxx.vercel.app/config/https://xxxxxxsubscribe?token=123456&file=https://github.com/TeaSalo/sing-box-subscribe/raw/main/config_template/config_template_groups_rule_set_tun.json
 ```
 
 ```
@@ -24,7 +24,7 @@ python main.py
 python main.py --template_index=0
 ```
 
-### 根据已有的qx，surge，loon，clash规则列表自定义规则集[https://github.com/TTeaSalo/sing-box-geosite](https://github.com/TeaSalo/sing-box-geosite)
+### 根据已有的qx，surge，loon，clash规则列表自定义规则集[https://github.com/TeaSalo/sing-box-geosite](https://github.com/TeaSalo/sing-box-geosite)
 
 ### wechat规则集源文件写法：
 ```json
