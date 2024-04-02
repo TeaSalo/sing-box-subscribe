@@ -8,21 +8,16 @@
       "external_controller": "127.0.0.1:9090",
       "external_ui": "ui",
       "secret": "",
-      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "Direct",
       "default_mode": "rule"
     },
   "cache_file": {
     "enabled": true,
-    "store_fakeip": false
+    "store_fakeip": true
     }
   },
   "dns": {
-    "fakeip": {
-      "enabled": true,
-      "inet4_range": "198.18.0.0/15",
-      "inet6_range": "fc00::/18"
-    },
     "servers": [
       {
         "tag": "Cloudflare",
@@ -53,13 +48,25 @@
         "server": "Fakeip"
       },
       {
+        "rule_set": "geosite-category-ads-all",
+        "server": "Block"
+      },
+      {
         "outbound": "any",
         "server": "Ali",
         "disable_cache": true
       },
       {
-        "rule_set": "geosite-category-ads-all",
-        "server": "Block"
+        "rule_set": "geosite-cn",
+        "server": "Ali"
+      },   
+      {
+        "clash_mode": "direct",
+        "server": "Ali"
+      },
+      {
+        "clash_mode": "global",
+        "server": "Fakeip"
       },
       {
         "inbound": "tun",
@@ -73,18 +80,6 @@
       {
         "rule_set": "geosite-geolocation-!cn",
         "server": "Cloudflare"
-      },   
-      {
-        "clash_mode": "direct",
-        "server": "Ali"
-      },
-      {
-        "clash_mode": "global",
-        "server": "Fakeip"
-      },
-      {
-        "rule_set": "geosite-cn",
-        "server": "Ali"
       }
     ],
     "final": "Cloudflare",
