@@ -14,7 +14,7 @@
             "tag": "tag_2",
             "enabled": true,
             "emoji": 1,
-            "subgroup": "",//命名/named
+            "subgroup": "",
             "prefix": "💕",
             "User-Agent":"clashmeta"
         }
