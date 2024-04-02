@@ -18,6 +18,11 @@
     }
   },
   "dns": {
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
     "servers": [
       {
         "tag": "Cloudflare",
@@ -28,6 +33,10 @@
         "tag": "Ali",
         "address": "https://223.5.5.5/dns-query",
         "detour": "Direct"
+      },
+      {
+        "tag": "Fakeip",
+        "address": "fakeip"
       },
       {
         "tag": "Block",
@@ -41,11 +50,7 @@
           "cdn.jsdelivr.net",
           "testingcf.jsdelivr.net"
         ],
-        "server": "Ali"
-      },
-      {
-        "rule_set": "geosite-category-ads-all",
-        "server": "Block"
+        "server": "Fakeip"
       },
       {
         "outbound": "any",
@@ -53,8 +58,21 @@
         "disable_cache": true
       },
       {
-        "rule_set": "geosite-cn",
-        "server": "Ali"
+        "rule_set": "geosite-category-ads-all",
+        "server": "Block"
+      },
+      {
+        "inbound": "tun",
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "Fakeip",
+        "rewrite_ttl": 1
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "server": "Cloudflare"
       },   
       {
         "clash_mode": "direct",
@@ -62,40 +80,53 @@
       },
       {
         "clash_mode": "global",
-        "server": "Cloudflare"
+        "server": "Fakeip"
       },
       {
-        "rule_set": "geosite-geolocation-!cn",
-        "server": "Cloudflare"
+        "rule_set": "geosite-cn",
+        "server": "Ali"
       }
     ],
-    "final": "Ali",
-    "strategy": "ipv4_only"
+    "final": "Cloudflare",
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true
   },
   "inbounds": [
     {
+      "type": "mixed",
+      "tag": "Mixed-in",
+      "listen": "0.0.0.0",
+      "listen_port": 7890,
+      "sniff": true
+    },
+    {
+      "type": "mixed",
+      "tag": "Loop-in",
+      "listen": "127.0.0.1",
+      "listen_port": 7891,
+      "sniff": true
+    },
+    {
       "type": "tun",
-      "inet4_address": "172.16.0.1/30",
+      "tag": "Tun-in",
       "mtu": 1375,
+      "inet4_address": "172.16.0.1/30",
+      "inet6_address": "fd00::1/126",
       "auto_route": true,
       "strict_route": true,
-      "sniff": true,
-      "endpoint_independent_nat": false,
       "stack": "system",
       "platform": {
         "http_proxy": {
           "enabled": true,
           "server": "127.0.0.1",
-          "server_port": 2080
+          "server_port": 7890
         }
-      }
-    },
-    {
-      "type": "mixed",
-      "listen": "127.0.0.1",
-      "listen_port": 2080,
-      "sniff": true,
-      "users": []
+      },
+      "sniff": true
     }
   ],
   "outbounds": [
@@ -116,7 +147,7 @@
         "♥Cloudflare 04"
       ],
       "filter":[
-        {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|@|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ]
     },
     {
@@ -147,35 +178,7 @@
       "default": "Japan"
     },
     {
-      "tag":"Telegram",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others",
-        "Proxies"
-      ],
-      "default": "Japan"
-    },
-    {
-      "tag":"Twitter",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others",
-        "Proxies"
-      ],
-      "default": "Japan"
-    },
-    {
-      "tag":"Facebook",
+      "tag":"Messages",
       "type":"selector",
       "outbounds":[
         "HongKong",
@@ -213,20 +216,6 @@
       "default": "TaiWan"
     },
     {
-      "tag":"Spotify",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others",
-        "Proxies"
-      ],
-      "default": "Japan"
-    },
-    {
       "tag":"TikTok",
       "type":"selector",
       "outbounds":[
@@ -240,21 +229,7 @@
       "default": "Singapore"
     },
     {
-      "tag":"NETFLIX",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others",
-        "Proxies"
-      ],
-      "default": "America"
-    },
-    {
-      "tag":"Disney+",
+      "tag":"Streaming",
       "type":"selector",
       "outbounds":[
         "HongKong",
@@ -279,8 +254,7 @@
         "America",
         "Others",
         "Proxies"
-      ],
-      "default": "America"
+      ]
     },
     {
       "tag":"Microsoft",
@@ -294,8 +268,7 @@
         "America",
         "Others",
         "Proxies"
-      ],
-      "default": "Japan"
+      ]
     },
     {
       "tag":"Games",
@@ -310,20 +283,6 @@
         "Others",
         "Proxies"
       ]
-    },
-    {
-      "tag":"Streaming",
-      "type":"selector",
-      "outbounds":[
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Others",
-        "Proxies"
-      ],
-      "default": "America"
     },
     {
       "tag":"Global",
@@ -361,16 +320,13 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥HKG 01",
-        "♥Cloudflare 01",
-        "♥Cloudflare 02",
-        "♥Cloudflare 03"
+        "Ss-out"
       ],
       "filter":[
         {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
+      "interval": "5m",
       "tolerance": 50
     },
     {
@@ -378,16 +334,13 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥TPE 01_AS-TW",
-        "♥Cloudflare 01",
-        "♥Cloudflare 02",
-        "♥Cloudflare 03"
+        "Ss-out"
       ],
       "filter":[
         {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
+      "interval": "5m",
       "tolerance": 50
     },
     {
@@ -395,16 +348,13 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥SIN 02_AS-SG",
-        "♥Cloudflare 01",
-        "♥Cloudflare 02",
-        "♥Cloudflare 03"
+        "Ss-out"
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
+      "interval": "5m",
       "tolerance": 50
     },
     {
@@ -412,16 +362,13 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥KIX 03_AS-JP",
-        "♥Cloudflare 01",
-        "♥Cloudflare 02",
-        "♥Cloudflare 03"
+        "Ss-out"
       ],
       "filter":[
         {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
+      "interval": "5m",
       "tolerance": 50
     },
     {
@@ -429,16 +376,13 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
-        "♥Cloudflare 01",
-        "♥Cloudflare 02",
-        "♥Cloudflare 03",
-        "♥Cloudflare 04"
+        "Ss-out"
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
+      "interval": "5m",
       "tolerance": 50
     },
     {
@@ -446,14 +390,11 @@
       "type":"selector",
       "outbounds":[
         "{all}",
-        "♥Cloudflare 01",
-        "♥Cloudflare 02",
-        "♥Cloudflare 03",
-        "♥Cloudflare 04",
+        "Ss-out",
         "Proxies"
       ],
       "filter":[
-        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美|网址|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|@|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美|网址|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ]
     },
     {
@@ -471,7 +412,7 @@
         "♥Cloudflare 04"
       ],
       "filter":[
-        {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|到期|探针|有效|关注|频道|@|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|到期|探针|有效|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -490,28 +431,37 @@
       "tag": "Block"
     },
     {
+      "method": "none",
+      "password": "",
+      "server": "127.0.0.1",
+      "server_port": 1080,
+      "type": "shadowsocks",
+      "domain_strategy": "",
+      "tag": "Ss-out"
+    },
+    {
       "packet_encoding": "",
       "server": "tpe1.cf-ip.rr.nu",
       "server_port": 443,
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "mositr.freenods.sbs",
+        "server_name": "vless.teasalo.cloudns.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "mositr.freenods.sbs"
+          "Host": "vless.teasalo.cloudns.org"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥TPE 01_AS-TW"
@@ -523,22 +473,22 @@
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "mositr.freenods.sbs",
+        "server_name": "vless.teasalo.cloudns.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "mositr.freenods.sbs"
+          "Host": "vless.teasalo.cloudns.org"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥SIN 02_AS-SG"
@@ -550,22 +500,22 @@
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "mositr.freenods.sbs",
+        "server_name": "vless.teasalo.cloudns.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "mositr.freenods.sbs"
+          "Host": "vless.teasalo.cloudns.org"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥KIX 03_AS-JP"
@@ -577,22 +527,22 @@
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "mositr.freenods.sbs",
+        "server_name": "vless.teasalo.cloudns.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "mositr.freenods.sbs"
+          "Host": "vless.teasalo.cloudns.org"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥HKG 01"
@@ -604,22 +554,22 @@
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "mositr.freenods.sbs",
+        "server_name": "vless.teasalo.cloudns.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "mositr.freenods.sbs"
+          "Host": "vless.teasalo.cloudns.org"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥Cloudflare 01"
@@ -631,22 +581,22 @@
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "mositr.freenods.sbs",
+        "server_name": "vless.teasalo.cloudns.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "mositr.freenods.sbs"
+          "Host": "vless.teasalo.cloudns.org"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥Cloudflare 02"
@@ -658,22 +608,22 @@
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "mositr.freenods.sbs",
+        "server_name": "vless.teasalo.cloudns.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "mositr.freenods.sbs"
+          "Host": "vless.teasalo.cloudns.org"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥Cloudflare 03"
@@ -685,22 +635,22 @@
       "tls": {
         "enabled": true,
         "insecure": false,
-        "server_name": "mositr.freenods.sbs",
+        "server_name": "vless.teasalo.cloudns.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "mositr.freenods.sbs"
+          "Host": "vless.teasalo.cloudns.org"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "678ac895-92c2-4f27-a9d4-f1a89c5f5365",
+      "uuid": "2e34d8d8-ae65-45e7-9e2c-36431967183a",
       "type": "vless",
       "domain_strategy": "",
       "tag": "♥Cloudflare 04"
@@ -724,8 +674,20 @@
         "outbound": "Block"
       },
       {
+        "domain": [
+          "appcenter.ms",
+          "firebase.io",
+          "crashlytics.com"
+        ],
+        "outbound": "Block"
+      },
+      {
         "rule_set": "geosite-category-ads-all",
         "outbound": "AdBlock"
+      },
+      {
+        "domain": "googleapis.cn",
+        "outbound": "Google"
       },
       {
         "clash_mode": "direct",
@@ -749,44 +711,34 @@
         "outbound": "OpenAI"
       },
       {
-        "rule_set": "geosite-youtube",
-        "outbound": "Google"
-      },
-      {
         "rule_set": "geoip-google",
         "outbound": "Google"
       },
       {
-        "rule_set": "geosite-google",
+        "rule_set": [
+          "geosite-youtube",
+          "geosite-google",
+          "geosite-github"
+        ],
         "outbound": "Google"
       },
       {
-        "rule_set": "geosite-github",
-        "outbound": "Google"
+        "rule_set": [
+          "geoip-telegram",
+          "geoip-twitter",
+          "geoip-facebook"
+        ],
+        "outbound": "Messages"
       },
       {
-        "rule_set": "geoip-telegram",
-        "outbound": "Telegram"
-      },
-      {
-        "rule_set": "geosite-telegram",
-        "outbound": "Telegram"
-      },
-      {
-        "rule_set":"geoip-twitter",
-        "outbound": "Twitter"
-      },
-      {
-        "rule_set": "geosite-twitter",
-        "outbound": "Twitter"
-      },
-      {
-        "rule_set": "geoip-facebook",
-        "outbound": "Facebook"
-      },
-      {
-        "rule_set":["geosite-facebook","geosite-instagram"],
-        "outbound": "Facebook"
+        "rule_set": [
+          "geosite-telegram",
+          "geosite-twitter",
+          "geosite-facebook",
+          "geosite-instagram",
+          "geosite-spotify"
+        ],
+        "outbound": "Messages"
       },
       {
         "rule_set": "geoip-bilibili",
@@ -801,24 +753,21 @@
         "outbound": "Bahamut"
       },
       {
-        "rule_set": "geosite-spotify",
-        "outbound": "Spotify"
-      },
-      {
         "rule_set": "geosite-tiktok",
         "outbound": "TikTok"
       },
       {
         "rule_set": "geoip-netflix",
-        "outbound": "NETFLIX"
+        "outbound": "Streaming"
       },
       {
-        "rule_set": "geosite-netflix",
-        "outbound": "NETFLIX"
-      },
-      {
-        "rule_set": "geosite-disney",
-        "outbound": "Disney+"
+        "rule_set": [
+          "geosite-hbo",
+          "geosite-disney",
+          "geosite-netflix",
+          "geosite-primevideo"
+        ],
+        "outbound": "Streaming"
       },
       {
         "rule_set": "geosite-apple",
@@ -835,14 +784,6 @@
       {
         "rule_set": "geosite-category-games",
         "outbound": "Games"
-      },
-      {
-        "rule_set": "geosite-hbo",
-        "outbound": "Streaming"
-      },
-      {
-        "rule_set": "geosite-primevideo",
-        "outbound": "Streaming"
       },
       {
         "rule_set": "geosite-geolocation-!cn",
