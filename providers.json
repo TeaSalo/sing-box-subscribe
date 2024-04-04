@@ -12,7 +12,7 @@
         {
             "url": "URL",
             "tag": "tag_2",
-            "enabled": true,
+            "enabled": false,
             "emoji": 0,
             "subgroup": "命名/named",
             "prefix": "💕",
