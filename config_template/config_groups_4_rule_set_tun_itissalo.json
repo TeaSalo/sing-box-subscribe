@@ -132,10 +132,10 @@
         "Auto",
         "Direct",
         "{all}",
+        "♥HKG 01",
         "♥TPE 01_AS-TW",
         "♥SIN 02_AS-SG",
         "♥KIX 03_AS-JP",
-        "♥HKG 01",
         "♥Cloudflare 01",
         "♥Cloudflare 02",
         "♥Cloudflare 03",
@@ -318,7 +318,7 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong|HKG|Hong|Kong|HGC|WTT|CMI"]}
+        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong|Hong|Kong|HGC|WTT|CMI"]}
       ],
       "url": "https://sub.teasalo.cloudns.org",
       "interval": "5m",
@@ -388,7 +388,7 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香||HKG|Hong|Kong|HGC|WTT|CMI|🇹🇼|TW|tw|台湾|台|新北|彰化|CHT|HINET|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|Tokyo|Osaka|Saitama|东京|大阪|埼玉|🇺🇸|US|us|美国|美|United States|America|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网址|官网|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|HongKong|Hong|Kong|HGC|WTT|CMI|🇹🇼|TW|tw|台湾|台|新北|彰化|CHT|HINET|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|Tokyo|Osaka|Saitama|东京|大阪|埼玉|🇺🇸|US|us|美国|美|United States|America|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网址|官网|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ]
     },
     {
@@ -396,10 +396,10 @@
       "type":"urltest",
       "outbounds":[
         "{all}",
+        "♥HKG 01",
         "♥TPE 01_AS-TW",
         "♥SIN 02_AS-SG",
         "♥KIX 03_AS-JP",
-        "♥HKG 01",
         "♥Cloudflare 01",
         "♥Cloudflare 02",
         "♥Cloudflare 03",
