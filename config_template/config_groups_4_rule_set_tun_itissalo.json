@@ -142,7 +142,7 @@
         "♥Cloudflare 04"
       ],
       "filter":[
-        {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ]
     },
     {
@@ -318,9 +318,10 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
+        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong|HKG|Hong|Kong|HGC|WTT|CMI"]},
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|到期|探针|有效|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://sub.teasalo.cloudns.org",
       "interval": "5m",
       "tolerance": 50
     },
@@ -332,9 +333,10 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
+        {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan|新北|彰化|CHT|HINET"]},
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|到期|探针|有效|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://sub.teasalo.cloudns.org",
       "interval": "5m",
       "tolerance": 50
     },
@@ -346,9 +348,10 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
+        {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]},
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|到期|探针|有效|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://sub.teasalo.cloudns.org",
       "interval": "5m",
       "tolerance": 50
     },
@@ -360,9 +363,10 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
+        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan|Tokyo|Osaka|Saitama|东京|大阪|埼玉"]},
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|到期|探针|有效|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://sub.teasalo.cloudns.org",
       "interval": "5m",
       "tolerance": 50
     },
@@ -374,9 +378,10 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
+        {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States|America|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥"]},
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|到期|探针|有效|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://sub.teasalo.cloudns.org",
       "interval": "5m",
       "tolerance": 50
     },
@@ -385,11 +390,10 @@
       "type":"selector",
       "outbounds":[
         "{all}",
-        "Ss-out",
-        "Proxies"
+        "Ss-out"
       ],
       "filter":[
-        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美|网址|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香||HKG|Hong|Kong|HGC|WTT|CMI|🇹🇼|TW|tw|台湾|台|新北|彰化|CHT|HINET|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|Tokyo|Osaka|Saitama|东京|大阪|埼玉|🇺🇸|US|us|美国|美|United States|America|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网址|官网|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ]
     },
     {
@@ -407,9 +411,9 @@
         "♥Cloudflare 04"
       ],
       "filter":[
-        {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|到期|探针|有效|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|到期|探针|有效|关注|频道|更新|订阅|线路|@|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://sub.teasalo.cloudns.org",
       "interval": "5m",
       "tolerance": 50
     },
@@ -442,7 +446,7 @@
     },
     {
       "packet_encoding": "",
-      "server": "tpe1.cf-ip.rr.nu",
+      "server": "tpe3.cf-ip.rr.nu",
       "server_port": 443,
       "tls": {
         "enabled": true,
