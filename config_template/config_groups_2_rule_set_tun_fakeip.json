@@ -134,7 +134,7 @@
         "{all}"
       ],
       "filter":[
-        {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|更新|订阅|线路|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|更新|订阅|线路|下载|邀请|TG|tg|t.me"]}
       ]
     },
     {
@@ -356,9 +356,10 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
+        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong|Hong|Kong|HGC|WTT|CMI"]},
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://www.google-analytics.com/generate_204",
       "interval": "5m",
       "tolerance": 50
     },
@@ -370,9 +371,10 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
+        {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan|新北|彰化|CHT|HINET"]},
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://www.google-analytics.com/generate_204",
       "interval": "5m",
       "tolerance": 50
     },
@@ -384,9 +386,10 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
+        {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|獅城|沪新|京新|泉新|穗新|深新|杭新|广新|廣新|滬新|Singapore"]},
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://www.google-analytics.com/generate_204",
       "interval": "5m",
       "tolerance": 50
     },
@@ -398,9 +401,10 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
+        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan|Tokyo|Osaka|Saitama|东京|大阪|埼玉|東京"]},
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://www.google-analytics.com/generate_204",
       "interval": "5m",
       "tolerance": 50
     },
@@ -412,9 +416,10 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
+        {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States|America|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|哥伦布|纽约"]},
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://www.google-analytics.com/generate_204",
       "interval": "5m",
       "tolerance": 50
     },
@@ -427,7 +432,7 @@
         "Proxies"
       ],
       "filter":[
-        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美|网址|网站|地址|剩余|过期|时间|有效|到期|探针|关注|频道|更新|订阅|线路|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|HongKong|Hong|Kong|HGC|WTT|CMI|🇹🇼|TW|tw|台湾|台|新北|彰化|CHT|HINET|🇸🇬|SG|sg|新加坡|狮|獅城|沪新|京新|泉新|穗新|深新|杭新|广新|廣新|滬新|🇯🇵|JP|jp|日本|日|Tokyo|Osaka|Saitama|东京|大阪|埼玉|東京|🇺🇸|US|us|美国|美|United States|America|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|哥伦布|纽约|网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|TG|tg|t.me"]}
       ]
     },
     {
@@ -437,9 +442,9 @@
         "{all}"
       ],
       "filter":[
-        {"action":"exclude","keywords":["网址|网站|地址|剩余|过期|时间|到期|探针|有效|关注|频道|更新|订阅|线路|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|到期|套餐|探针|有效|关注|频道|群组|更新|订阅|线路|下载|邀请|TG|tg|t.me"]}
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "https://www.google-analytics.com/generate_204",
       "interval": "5m",
       "tolerance": 50
     },
