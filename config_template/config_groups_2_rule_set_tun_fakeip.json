@@ -30,8 +30,8 @@
         "detour": "Proxies"
       },
       {
-        "tag": "Pod",
-        "address": "https://120.53.53.53/dns-query",
+        "tag": "Tencent",
+        "address": "https://1.12.12.12/dns-query",
         "detour": "Direct"
       },
       {
@@ -61,16 +61,16 @@
       },
       {
         "outbound": "any",
-        "server": "Pod",
+        "server": "Tencent",
         "disable_cache": true
       },
       {
         "rule_set": "geosite-cn",
-        "server": "Pod"
+        "server": "Tencent"
       },   
       {
         "clash_mode": "direct",
-        "server": "Pod"
+        "server": "Tencent"
       },
       {
         "clash_mode": "global",
@@ -90,7 +90,7 @@
         "server": "Google"
       }
     ],
-    "final": "Pod",
+    "final": "Tencent",
     "independent_cache": true
   },
   "inbounds": [
