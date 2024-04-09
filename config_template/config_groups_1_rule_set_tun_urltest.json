@@ -139,7 +139,7 @@
         "Others",
         "Proxies"
       ],
-      "default": "Japan"
+      "default": "Singapore"
     },
     {
       "tag":"Telegram",
@@ -274,8 +274,7 @@
         "America",
         "Others",
         "Proxies"
-      ],
-      "default": "America"
+      ]
     },
     {
       "tag":"Microsoft",
@@ -289,8 +288,7 @@
         "America",
         "Others",
         "Proxies"
-      ],
-      "default": "Japan"
+      ]
     },
     {
       "tag":"Games",
