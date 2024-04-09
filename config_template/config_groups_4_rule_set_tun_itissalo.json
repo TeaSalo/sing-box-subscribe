@@ -48,7 +48,10 @@
         "server": "Fakeip"
       },
       {
-        "rule_set": "geosite-category-ads-all",
+        "rule_set": [
+        "geosite-category-ads-all",
+        "AWAvenue-Ads-Rule"
+        ],
         "server": "Block"
       },
       {
@@ -455,7 +458,10 @@
         "outbound": "Block"
       },
       {
-        "rule_set": "geosite-category-ads-all",
+        "rule_set": [
+        "geosite-category-ads-all",
+        "AWAvenue-Ads-Rule"
+        ],
         "outbound": "AdBlock"
       },
       {
@@ -809,6 +815,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+        "download_detour": "Direct"
+      },
+      {
+        "tag": "AWAvenue-Ads-Rule",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json",
         "download_detour": "Direct"
       }
     ]
