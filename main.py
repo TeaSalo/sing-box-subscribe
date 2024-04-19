@@ -221,7 +221,7 @@ def get_content_from_url(url, n=6):
     print('处理: \033[31m' + url + '\033[0m')
     # print('Đang tải link đăng ký: \033[31m' + url + '\033[0m')
     prefixes = ["vmess://", "vless://", "ss://", "ssr://", "trojan://", "tuic://", "hysteria://", "hysteria2://",
-                "hy2://", "wg://", "http2://", "socks://", "socks5://"]
+                "hy2://", "wg://", "wireguard://", "http2://", "socks://", "socks5://"]
     if any(url.startswith(prefix) for prefix in prefixes):
         response_text = tool.noblankLine(url)
         return response_text
@@ -423,7 +423,7 @@ def combin_to_config(config, data):
             i += 1
             for out in config_outbounds:
                 if out.get("outbounds"):
-                    if out['tag'] == 'proxy':
+                    if out['tag'] == 'Proxy':
                         out["outbounds"] = [out["outbounds"]] if isinstance(out["outbounds"], str) else out["outbounds"]
                         if '{all}' in out["outbounds"]:
                             index_of_all = out["outbounds"].index('{all}')
@@ -436,7 +436,7 @@ def combin_to_config(config, data):
         else:
             for out in config_outbounds:
                 if out.get("outbounds"):
-                    if out['tag'] == 'proxy':
+                    if out['tag'] == 'Proxy':
                         out["outbounds"] = [out["outbounds"]] if isinstance(out["outbounds"], str) else out["outbounds"]
                         out["outbounds"].append('{' + group + '}')
     temp_outbounds = []
@@ -477,9 +477,11 @@ def combin_to_config(config, data):
                     else:
                         t_o.append(oo)
                 if len(t_o) == 0:
+                    t_o.append('Proxy')
                     print('发现 {} 出站下的节点数量为 0 ，会导致sing-box无法运行，请检查config模板是否正确。'.format(
                         po['tag']))
                     # print('Sing-Box không chạy được vì không tìm thấy bất kỳ proxy nào trong outbound của {}. Vui lòng kiểm tra xem mẫu cấu hình có đúng không!!'.format(po['tag']))
+                    """
                     config_path = json.loads(temp_json_data).get("save_config_path", "config.json")
                     CONFIG_FILE_NAME = config_path
                     config_file_path = os.path.join('/tmp', CONFIG_FILE_NAME)
@@ -488,6 +490,7 @@ def combin_to_config(config, data):
                         print(f"已删除文件：{config_file_path}")
                         # print(f"Các tập tin đã bị xóa: {config_file_path}")
                     sys.exit()
+                    """
                 po['outbounds'] = t_o
                 if po.get('filter'):
                     del po['filter']
