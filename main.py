@@ -194,7 +194,10 @@ def parse_content(content):
         factory = get_parser(t)
         if not factory:
             continue
-        node = factory(t)
+        try:
+            node = factory(t)
+        except Exception as e:  #节点解析失败，跳过
+            pass
         if node:
             nodelist.append(node)
     return nodelist
@@ -216,7 +219,7 @@ def get_parser(node):
     return parsers_mod[proto].parse
 
 
-def get_content_from_url(url, n=6):
+def get_content_from_url(url, n=10):
     UA = ''
     print('处理: \033[31m' + url + '\033[0m')
     # print('Đang tải link đăng ký: \033[31m' + url + '\033[0m')
