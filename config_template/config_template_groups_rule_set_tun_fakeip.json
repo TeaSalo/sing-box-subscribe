@@ -142,7 +142,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ],
       "default": "America"
     },
@@ -155,7 +156,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -167,7 +169,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -179,7 +182,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -191,7 +195,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -200,7 +205,8 @@
       "outbounds":[
         "direct",
         "HongKong",
-        "TaiWan"
+        "TaiWan",
+        "Proxy"
       ]
     },
     {
@@ -220,7 +226,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ],
       "default": "America"
     },
@@ -232,7 +239,8 @@
         "TaiWan",
         "Singapore",
         "Japan",
-        "America"
+        "America",
+        "Proxy"
       ],
       "default": "Japan"
     },
@@ -245,7 +253,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -257,7 +266,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -270,7 +280,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -283,7 +294,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -296,7 +308,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -308,7 +321,8 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -321,7 +335,8 @@
         "Japan",
         "America",
         "Others",
-        "direct"
+        "direct",
+        "Proxy"
       ]
     },
     {
@@ -342,63 +357,87 @@
     },
     {
       "tag":"HongKong",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        "Ss-out"
       ],
       "filter":[
         {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
-      ]
+      ],
+      "url": "http://captive.apple.com",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"TaiWan",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        "Ss-out"
       ],
       "filter":[
         {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
-      ]
+      ],
+      "url": "http://captive.apple.com",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"Singapore",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        "Ss-out"
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
-      ]
+      ],
+      "url": "http://captive.apple.com",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"Japan",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        "Ss-out"
       ],
       "filter":[
         {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
-      ]
+      ],
+      "url": "http://captive.apple.com",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"America",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
-        "{all}"
+        "{all}",
+        "Ss-out"
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
-      ]
+      ],
+      "url": "http://captive.apple.com",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"Others",
       "type":"selector",
       "outbounds":[
-        "{all}"
+        "{all}",
+        "Ss-out"
       ],
       "filter":[
         {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美"]}
-      ]
+      ],
+      "url": "http://captive.apple.com",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"auto",
@@ -409,7 +448,7 @@
       "filter":[
         {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}
       ],
-      "url": "http://www.gstatic.com/generate_204",
+      "url": "http://captive.apple.com",
       "interval": "10m",
       "tolerance": 50
     },
@@ -424,6 +463,15 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "method": "none",
+      "password": "",
+      "server": "127.0.0.1",
+      "server_port": 1080,
+      "type": "shadowsocks",
+      "domain_strategy": "",
+      "tag": "Ss-out"
     }
   ],
   "route": {
@@ -747,6 +795,13 @@
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
         "download_detour": "direct"
+      },
+      {
+        "tag": "AWAvenue-Ads-Rule",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json",
+        "download_detour": "Direct"
       }
     ]
   }
