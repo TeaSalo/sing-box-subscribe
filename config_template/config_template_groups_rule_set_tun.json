@@ -393,7 +393,7 @@
     },
     {
       "tag":"Others",
-      "type":"urltest",
+      "type":"selector",
       "outbounds":[
         "{all}",
         "Ss-out"
