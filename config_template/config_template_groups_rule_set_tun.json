@@ -36,8 +36,11 @@
     ],
     "rules": [
       {
-        "rule_set": "geosite-category-ads-all",
-        "server": "block"
+        "rule_set": [
+          "geosite-category-ads-all",
+          "AWAvenue-Ads-Rule"
+        ],
+        "server": "Block"
       },
       {
         "outbound": "any",
