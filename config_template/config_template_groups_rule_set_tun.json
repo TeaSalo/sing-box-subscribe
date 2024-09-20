@@ -770,7 +770,7 @@
         "type": "remote",
         "format": "source",
         "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json",
-        "download_detour": "Direct"
+        "download_detour": "direct"
       }
     ]
   }
