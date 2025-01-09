@@ -97,11 +97,14 @@
     {
       "tag": "tun",
       "type": "tun",
-      "inet4_address": "172.16.0.0/30",
-      "inet6_address": "fdfe:dcba:9876::0/126",
+      "address": [
+        "172.19.0.0/30",
+        "fdfe:dcba:9876::0/126"
+      ],
       "mtu": 1375,
       "stack": "system",
       "auto_route": true,
+      "strict_route": true,
       "sniff": true,
       "platform": {
         "http_proxy": {
