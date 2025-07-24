@@ -27,7 +27,7 @@
     "servers": [
       {
         "tag": "google",
-        "address": "https://8.8.8.8/dns-query"
+        "address": "tls://8.8.8.8"
       },
       {
         "tag": "local",
@@ -124,9 +124,6 @@
         "auto",
         "direct",
         "{all}"
-      ],
-      "filter":[
-        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|@|TG|tg|t.me"]}
       ]
     },
     {
@@ -155,7 +152,33 @@
       "default": "Japan"
     },
     {
-      "tag":"Messages",
+      "tag":"Telegram",
+      "type":"selector",
+      "outbounds":[
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ],
+      "default": "Japan"
+    },
+    {
+      "tag":"Twitter",
+      "type":"selector",
+      "outbounds":[
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ],
+      "default": "Japan"
+    },
+    {
+      "tag":"Facebook",
       "type":"selector",
       "outbounds":[
         "HongKong",
@@ -210,7 +233,20 @@
       "default": "Japan"
     },
     {
-      "tag":"Streaming",
+      "tag":"Netflix",
+      "type":"selector",
+      "outbounds":[
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ],
+      "default": "America"
+    },
+    {
+      "tag":"Disney+",
       "type":"selector",
       "outbounds":[
         "HongKong",
@@ -262,6 +298,19 @@
       ]
     },
     {
+      "tag":"Streaming",
+      "type":"selector",
+      "outbounds":[
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ],
+      "default": "America"
+    },
+    {
       "tag":"Global",
       "type":"selector",
       "outbounds":[ 
@@ -291,12 +340,8 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong|Hong|Kong|HGC|WTT|CMI"]},
-        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|@|TG|tg|t.me"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 50
+        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
+      ]
     },
     {
       "tag":"TaiWan",
@@ -306,12 +351,8 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan|新北|彰化|CHT|HINET"]},
-        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|@|TG|tg|t.me"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 50
+        {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
+      ]
     },
     {
       "tag":"Singapore",
@@ -321,12 +362,8 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|獅城|沪新|京新|泉新|穗新|深新|杭新|广新|廣新|滬新|Singapore"]},
-        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|@|TG|tg|t.me"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 50
+        {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
+      ]
     },
     {
       "tag":"Japan",
@@ -336,12 +373,8 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan|Tokyo|Osaka|Saitama|东京|大阪|埼玉|東京"]},
-        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|@|TG|tg|t.me"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 50
+        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
+      ]
     },
     {
       "tag":"America",
@@ -351,22 +384,17 @@
         "Ss-out"
       ],
       "filter":[
-        {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States|America|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|哥伦布|纽约"]},
-        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|@|TG|tg|t.me"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 50
+        {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
+      ]
     },
     {
       "tag":"Others",
       "type":"selector",
       "outbounds":[
-        "{all}",
-        "Ss-out"
+        "{all}"
       ],
       "filter":[
-        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|HongKong|Hong|Kong|HGC|WTT|CMI|🇹🇼|TW|tw|台湾|台|新北|彰化|CHT|HINET|🇸🇬|SG|sg|新加坡|狮|獅城|沪新|京新|泉新|穗新|深新|杭新|广新|廣新|滬新|🇯🇵|JP|jp|日本|日|Tokyo|Osaka|Saitama|东京|大阪|埼玉|東京|🇺🇸|US|us|美国|美|United States|America|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|哥伦布|纽约|网址|官网|网站|地址|剩余|过期|时间|有效|到期|套餐|探针|关注|频道|群组|更新|订阅|线路|下载|邀请|@|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美"]}
       ]
     },
     {
@@ -376,10 +404,10 @@
         "{all}"
       ],
       "filter":[
-        {"action":"exclude","keywords":["网址|官网|网站|地址|剩余|过期|时间|到期|套餐|探针|有效|关注|频道|群组|更新|订阅|线路|下载|邀请|@|TG|tg|t.me"]}
+        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}
       ],
       "url": "http://www.gstatic.com/generate_204",
-      "interval": "5m",
+      "interval": "10m",
       "tolerance": 50
     },
     {
@@ -457,8 +485,16 @@
         "outbound": "Google"
       },
       {
-        "rule_set": ["geoip-telegram", "geosite-telegram", "geoip-twitter", "geosite-twitter", "geoip-facebook", "geosite-facebook"],
-        "outbound": "Messages"
+        "rule_set": ["geoip-telegram", "geosite-telegram"],
+        "outbound": "Telegram"
+      },
+      {
+        "rule_set": ["geoip-twitter", "geosite-twitter"],
+        "outbound": "Twitter"
+      },
+      {
+        "rule_set":["geoip-facebook", "geosite-facebook"],
+        "outbound": "Facebook"
       },
       {
         "rule_set": "geosite-bilibili",
@@ -477,8 +513,12 @@
         "outbound": "TikTok"
       },
       {
-        "rule_set": ["geoip-netflix", "geosite-netflix", "geosite-disney", "geosite-hbo", "geosite-primevideo"],
-        "outbound": "Streaming"
+        "rule_set": ["geoip-netflix", "geosite-netflix"],
+        "outbound": "Netflix"
+      },
+      {
+        "rule_set": "geosite-disney",
+        "outbound": "Disney+"
       },
       {
         "rule_set": ["geoip-apple", "geosite-apple", "geosite-amazon"],
@@ -491,6 +531,10 @@
       {
         "rule_set": ["geosite-category-games", "geosite-dmm"],
         "outbound": "Games"
+      },
+      {
+        "rule_set": ["geosite-hbo", "geosite-primevideo"],
+        "outbound": "Streaming"
       },
       {
         "rule_set": "geosite-geolocation-!cn",
