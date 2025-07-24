@@ -148,8 +148,7 @@
         "Japan",
         "America",
         "Others"
-      ],
-      "default": "Japan"
+      ]
     },
     {
       "tag":"Telegram",
@@ -308,7 +307,7 @@
         "America",
         "Others"
       ],
-      "default": "America"
+      "default": "Singapore"
     },
     {
       "tag":"Global",
@@ -334,10 +333,9 @@
     },
     {
       "tag":"HongKong",
-      "type":"urltest",
+      "type":"selector",
       "outbounds":[
-        "{all}",
-        "Ss-out"
+        "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
@@ -345,10 +343,9 @@
     },
     {
       "tag":"TaiWan",
-      "type":"urltest",
+      "type":"selector",
       "outbounds":[
-        "{all}",
-        "Ss-out"
+        "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
@@ -356,10 +353,9 @@
     },
     {
       "tag":"Singapore",
-      "type":"urltest",
+      "type":"selector",
       "outbounds":[
-        "{all}",
-        "Ss-out"
+        "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
@@ -367,10 +363,9 @@
     },
     {
       "tag":"Japan",
-      "type":"urltest",
+      "type":"selector",
       "outbounds":[
-        "{all}",
-        "Ss-out"
+        "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
@@ -378,10 +373,9 @@
     },
     {
       "tag":"America",
-      "type":"urltest",
+      "type":"selector",
       "outbounds":[
-        "{all}",
-        "Ss-out"
+        "{all}"
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
@@ -413,15 +407,6 @@
     {
       "type": "direct",
       "tag": "direct"
-    },
-    {
-      "method": "none",
-      "password": "",
-      "server": "127.0.0.1",
-      "server_port": 1080,
-      "type": "shadowsocks",
-      "domain_strategy": "",
-      "tag": "Ss-out"
     }
   ],
   "route": {
