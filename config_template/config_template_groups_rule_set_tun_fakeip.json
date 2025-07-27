@@ -148,7 +148,8 @@
         "Japan",
         "America",
         "Others"
-      ]
+      ],
+      "default": "Japan"
     },
     {
       "tag":"Telegram",
@@ -160,7 +161,8 @@
         "Japan",
         "America",
         "Others"
-      ]
+      ],
+      "default": "Japan"
     },
     {
       "tag":"Twitter",
@@ -172,7 +174,8 @@
         "Japan",
         "America",
         "Others"
-      ]
+      ],
+      "default": "Japan"
     },
     {
       "tag":"Facebook",
@@ -184,7 +187,8 @@
         "Japan",
         "America",
         "Others"
-      ]
+      ],
+      "default": "Japan"
     },
     {
       "tag":"BiliBili",
@@ -238,7 +242,8 @@
         "Japan",
         "America",
         "Others"
-      ]
+      ],
+      "default": "America"
     },
     {
       "tag":"Disney+",
@@ -250,7 +255,8 @@
         "Japan",
         "America",
         "Others"
-      ]
+      ],
+      "default": "America"
     },
     {
       "tag":"Apple",
@@ -314,7 +320,8 @@
         "America",
         "Others",
         "direct"
-      ]
+      ],
+      "default": "Japan"
     },
     {
       "tag":"China",
