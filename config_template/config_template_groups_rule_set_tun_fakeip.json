@@ -218,7 +218,7 @@
         "America",
         "Others"
       ],
-      "default": "America"
+      "default": "Singapore"
     },
     {
       "tag":"TikTok",
@@ -307,7 +307,8 @@
         "Japan",
         "America",
         "Others"
-      ]
+      ],
+      "default": "Singapore"
     },
     {
       "tag":"Global",
