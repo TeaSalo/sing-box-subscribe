@@ -118,6 +118,11 @@
       "outbounds":[
         "auto",
         "direct",
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
         "{all}"
       ]
     },
@@ -129,7 +134,13 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
       ],
       "default": "America"
     },
@@ -142,8 +153,15 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
-      ]
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
+      ],
+      "default": "Japan-auto"
     },
     {
       "tag":"Telegram",
@@ -154,8 +172,15 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
-      ]
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
+      ],
+      "default": "Japan-auto"
     },
     {
       "tag":"Twitter",
@@ -166,8 +191,15 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
-      ]
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
+      ],
+      "default": "Japan-auto"
     },
     {
       "tag":"Facebook",
@@ -178,8 +210,15 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
-      ]
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
+      ],
+      "default": "Japan-auto"
     },
     {
       "tag":"BiliBili",
@@ -187,7 +226,11 @@
       "outbounds":[
         "direct",
         "HongKong",
-        "TaiWan"
+        "TaiWan",
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Proxy"
+        
       ]
     },
     {
@@ -195,6 +238,7 @@
       "type":"selector",
       "outbounds":[
         "TaiWan",
+        "TaiWan-auto",
         "Proxy"
       ]
     },
@@ -207,9 +251,15 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
       ],
-      "default": "America"
+      "default": "Singapore-auto"
     },
     {
       "tag":"TikTok",
@@ -219,9 +269,16 @@
         "TaiWan",
         "Singapore",
         "Japan",
-        "America"
+        "America",
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
       ],
-      "default": "Japan"
+      "default": "Japan-auto"
     },
     {
       "tag":"Netflix",
@@ -232,8 +289,15 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
-      ]
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
+      ],
+      "default": "America"
     },
     {
       "tag":"Disney+",
@@ -244,8 +308,15 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
-      ]
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
+      ],
+      "default": "America"
     },
     {
       "tag":"Apple",
@@ -257,8 +328,15 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
-      ]
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
+      ],
+      "default": "America-auto"
     },
     {
       "tag":"Microsoft",
@@ -270,8 +348,15 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
-      ]
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
+      ],
+      "default": "America-auto"
     },
     {
       "tag":"Games",
@@ -283,7 +368,13 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
       ]
     },
     {
@@ -295,8 +386,15 @@
         "Singapore",
         "Japan",
         "America",
-        "Others"
-      ]
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
+        "Others",
+        "Proxy"
+      ],
+      "default": "Singapore-auto"
     },
     {
       "tag":"Global",
@@ -307,9 +405,16 @@
         "Singapore",
         "Japan",
         "America",
+        "HongKong-auto",
+        "TaiWan-auto",
+        "Singapore-auto",
+        "Japan-auto",
+        "America-auto",
         "Others",
+        "Proxy",
         "direct"
-      ]
+      ],
+      "default": "Japan-auto"
     },
     {
       "tag":"China",
@@ -370,6 +475,61 @@
       ]
     },
     {
+      "tag":"HongKong-auto",
+      "type":"urltest",
+      "outbounds":[
+        "{all}",
+        "Ss-out"
+      ],
+      "filter":[
+        {"action":"include","keywords":["🇭🇰|HK|hk|香港|港|HongKong"]}
+      ]
+    },
+    {
+      "tag":"TaiWan-auto",
+      "type":"urltest",
+      "outbounds":[
+        "{all}",
+        "Ss-out"
+      ],
+      "filter":[
+        {"action":"include","keywords":["🇹🇼|TW|tw|台湾|臺灣|台|Taiwan"]}
+      ]
+    },
+    {
+      "tag":"Singapore-auto",
+      "type":"urltest",
+      "outbounds":[
+        "{all}",
+        "Ss-out"
+      ],
+      "filter":[
+        {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
+      ]
+    },
+    {
+      "tag":"Japan-auto",
+      "type":"urltest",
+      "outbounds":[
+        "{all}",
+        "Ss-out"
+      ],
+      "filter":[
+        {"action":"include","keywords":["🇯🇵|JP|jp|日本|日|Japan"]}
+      ]
+    },
+    {
+      "tag":"America-auto",
+      "type":"urltest",
+      "outbounds":[
+        "{all}",
+        "Ss-out"
+      ],
+      "filter":[
+        {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
+      ]
+    },
+    {
       "tag":"Others",
       "type":"selector",
       "outbounds":[
@@ -395,6 +555,15 @@
     {
       "type": "direct",
       "tag": "direct"
+    },
+    {
+      "method": "none",
+      "password": "",
+      "server": "127.0.0.1",
+      "server_port": 1080,
+      "type": "shadowsocks",
+      "domain_strategy": "",
+      "tag": "Ss-out"
     }
   ],
   "route": {
